@@ -10,7 +10,9 @@ app.use(cors())
 app.use(express.json());
 const port =process.env.PORT ||5000;
 
-
+app.get('/', (req, res) =>{
+  res.send("Welcome to My grocery Server")
+})
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.j70me.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
